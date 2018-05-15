@@ -8,11 +8,11 @@
 
     <ImageView
         android:background="@drawable/smiley"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
     <TextView
         android:gravity="center"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:text="Algorithm Implementation Baaki aahe Madam !"
         android:id="@+id/tvCustomToast"
         android:layout_width="match_parent"

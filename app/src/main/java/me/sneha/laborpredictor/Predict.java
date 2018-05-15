@@ -47,7 +47,7 @@ public class Predict extends AppCompatActivity {
 
                 Toast tl=new Toast(Predict.this);
                 tl.setDuration(Toast.LENGTH_SHORT);
-                tl.setGravity(Gravity.CENTER,100,0);
+                tl.setGravity(Gravity.CENTER,0,-100);
                 tl.setView(layout1);
                 tl.show();
 
