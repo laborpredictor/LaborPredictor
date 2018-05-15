@@ -43,7 +43,6 @@ public class Predict extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
-                TextView tvCustomToast=(TextView)layout1.findViewById(R.id.tvCustomToast);
 
                 Toast tl=new Toast(Predict.this);
                 tl.setDuration(Toast.LENGTH_SHORT);
