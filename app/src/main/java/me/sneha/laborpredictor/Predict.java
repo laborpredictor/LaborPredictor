@@ -15,11 +15,13 @@ import android.widget.Toast;
 public class Predict extends AppCompatActivity {
 
     EditText etName,etAge,etBPSystol,etBPDiastol,etFW,etFHR,etCL;
-    Spinner spFPType,spFPSubtype;
-    ArrayAdapter<String> adpType,adpNormalSubtype,adpAbnormalSubtype;
+    Spinner spFPType,spFPSubtype,spPPType,spPPSubtype;
+    ArrayAdapter<String> adpType,adpFPNormalSubtype,adpFPAbnormalSubtype,adpPPNormalSubtype,adpPPAbnormalSubtype;
     String[] strType={"Normal","Abnormal"};
-    String[] strNormalSubtype={"Cephalic"};
-    String[] strAbnormalSubtype={"Occipito","Shoulder","Breech","Brow"};
+    String[] strFPNormalSubtype={"Cephalic"};
+    String[] strFPAbnormalSubtype={"Occipito","Shoulder","Breech","Brow"};
+    String[] strPPNormalSubtype={"Posterior","Anterior"};
+    String[] strPPAbnormalSubtype={"Low Lying","Placental Abruption"};
     Button btnSubmit;
 
     @Override
@@ -37,6 +39,8 @@ public class Predict extends AppCompatActivity {
 
         spFPType=findViewById(R.id.spFPType);
         spFPSubtype=findViewById(R.id.spFPSubtype);
+        spPPType=findViewById(R.id.spPPType);
+        spPPSubtype=findViewById(R.id.spPPSubtype);
 
         btnSubmit=findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -56,20 +60,40 @@ public class Predict extends AppCompatActivity {
         });
 
         adpType=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strType);
-        adpNormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strNormalSubtype);
-        adpAbnormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strAbnormalSubtype);
+        adpFPNormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strFPNormalSubtype);
+        adpFPAbnormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strFPAbnormalSubtype);
+        adpPPNormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strPPNormalSubtype);
+        adpPPAbnormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strPPAbnormalSubtype);
 
         spFPType.setAdapter(adpType);
+        spPPType.setAdapter(adpType);
+
         spFPType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
-                    case 0:spFPSubtype.setAdapter(adpNormalSubtype);
+                    case 0:spFPSubtype.setAdapter(adpFPNormalSubtype);
                             break;
-                    case 1:spFPSubtype.setAdapter(adpAbnormalSubtype);
+                    case 1:spFPSubtype.setAdapter(adpFPAbnormalSubtype);
                             break;
                 }
-                spFPSubtype.setEnabled(true);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        spPPType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:spPPSubtype.setAdapter(adpPPNormalSubtype);
+                        break;
+                    case 1:spPPSubtype.setAdapter(adpPPAbnormalSubtype);
+                        break;
+                }
             }
 
             @Override
