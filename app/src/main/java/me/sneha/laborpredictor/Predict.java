@@ -2,11 +2,15 @@ package me.sneha.laborpredictor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Predict extends AppCompatActivity {
 
@@ -16,6 +20,7 @@ public class Predict extends AppCompatActivity {
     String[] strType={"Normal","Abnormal"};
     String[] strNormalSubtype={"Cephalic"};
     String[] strAbnormalSubtype={"Occipito","Shoulder","Breech","Brow"};
+    Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +37,22 @@ public class Predict extends AppCompatActivity {
 
         spFPType=findViewById(R.id.spFPType);
         spFPSubtype=findViewById(R.id.spFPSubtype);
-        spFPSubtype.setEnabled(false);
+
+        btnSubmit=findViewById(R.id.btnSubmit);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
+                TextView tvCustomToast=(TextView)layout1.findViewById(R.id.tvCustomToast);
+
+                Toast tl=new Toast(Predict.this);
+                tl.setDuration(Toast.LENGTH_SHORT);
+                tl.setGravity(Gravity.CENTER,100,0);
+                tl.setView(layout1);
+                tl.show();
+
+            }
+        });
 
         adpType=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strType);
         adpNormalSubtype=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,strNormalSubtype);
