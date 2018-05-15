@@ -47,9 +47,11 @@ public class Predict extends AppCompatActivity {
 
                 Toast tl=new Toast(Predict.this);
                 tl.setDuration(Toast.LENGTH_SHORT);
-                tl.setGravity(Gravity.CENTER,0,-100);
+                tl.setGravity(Gravity.CENTER,0,-200);
                 tl.setView(layout1);
                 tl.show();
+
+                Toast.makeText(Predict.this, "Algorithm Implementation Baaki aahe Madam !", Toast.LENGTH_SHORT).show();
 
             }
         });
