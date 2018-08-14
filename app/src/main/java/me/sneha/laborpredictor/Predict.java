@@ -2,6 +2,7 @@ package me.sneha.laborpredictor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -46,15 +47,40 @@ public class Predict extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
+                /*View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
 
                 Toast tl=new Toast(Predict.this);
                 tl.setDuration(Toast.LENGTH_SHORT);
                 tl.setGravity(Gravity.CENTER,0,-200);
                 tl.setView(layout1);
                 tl.show();
-
                 Toast.makeText(Predict.this, "Algorithm Implementation Baaki aahe Madam !", Toast.LENGTH_SHORT).show();
+                */
+                if(etName.getText().toString().isEmpty()){
+                    etName.setError("Enter Name");
+                }
+                if(etBPSystol.getText().toString().isEmpty()){
+                    etBPSystol.setError("Enter Systol Value");
+                }
+                if(etBPDiastol.getText().toString().isEmpty()){
+                    etBPDiastol.setError("Enter Diastol Value");
+                }
+                if(etFHR.getText().toString().isEmpty()){
+                    etFHR.setError("Enter Fetus Heart Rate");
+                }
+                if(etCL.getText().toString().isEmpty()){
+                    etCL.setError("Enter Cervix Length");
+                }
+                if(etFW.getText().toString().isEmpty()){
+                    etFW.setError("Enter Fetus Weight");
+                }
+
+                if(!etName.getText().toString().isEmpty() && !etBPSystol.getText().toString().isEmpty() && !etBPDiastol.getText().toString().isEmpty()
+                        && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etFW.getText().toString().isEmpty()){
+
+                    Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
+
+                }
 
             }
         });

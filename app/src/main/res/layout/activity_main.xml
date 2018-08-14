@@ -15,7 +15,7 @@
        android:layout_height="70dp" />
    <Button
        android:textSize="18dp"
-       android:text="Test Button"
+       android:text="View Records"
        android:layout_width="match_parent"
        android:layout_height="70dp" />
    <Button
