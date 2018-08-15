@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Predict" />
-        <activity android:name=".ViewRecords"></activity>
+        <activity android:name=".ViewRecords" />
+        <activity android:name=".RecordDetail"></activity>
     </application>
 
 </manifest>
