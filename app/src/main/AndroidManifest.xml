@@ -22,7 +22,7 @@
         <activity android:name=".Predict" />
         <activity android:name=".ViewRecords" />
         <activity android:name=".RecordDetail"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
     </application>
 
 </manifest>
