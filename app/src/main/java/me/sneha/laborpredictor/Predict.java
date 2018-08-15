@@ -1,5 +1,6 @@
 package me.sneha.laborpredictor;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 
 public class Predict extends AppCompatActivity {
 
-    EditText etName,etAge,etBPSystol,etBPDiastol,etFW,etFHR,etCL;
+    EditText etName,etAge,etBPSystol,etBPDiastol,etFW,etFHR,etCL,etAF;
     Spinner spFPType,spFPSubtype,spPPType,spPPSubtype;
     ArrayAdapter<String> adpType,adpFPNormalSubtype,adpFPAbnormalSubtype,adpPPNormalSubtype,adpPPAbnormalSubtype;
     String[] strType={"Normal","Abnormal"};
@@ -37,6 +38,7 @@ public class Predict extends AppCompatActivity {
         etFW=findViewById(R.id.etFW);
         etFHR=findViewById(R.id.etFHR);
         etCL=findViewById(R.id.etCL);
+        etAF=findViewById(R.id.etAF);
 
         spFPType=findViewById(R.id.spFPType);
         spFPSubtype=findViewById(R.id.spFPSubtype);
@@ -71,14 +73,21 @@ public class Predict extends AppCompatActivity {
                 if(etCL.getText().toString().isEmpty()){
                     etCL.setError("Enter Cervix Length");
                 }
-                if(etFW.getText().toString().isEmpty()){
-                    etFW.setError("Enter Fetus Weight");
+                if(etAF.getText().toString().isEmpty()){
+                    etAF.setError("Enter Amniotic Fluid value");
                 }
 
                 if(!etName.getText().toString().isEmpty() && !etBPSystol.getText().toString().isEmpty() && !etBPDiastol.getText().toString().isEmpty()
-                        && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etFW.getText().toString().isEmpty()){
+                        && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty()){
 
-                    Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
+                    dbhelper db=new dbhelper(Predict.this);
+                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
+                            etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
+                            etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
+                            spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
+                    if(result.equalsIgnoreCase("success")) {
+                        Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
+                    }
 
                 }
 

@@ -17,7 +17,8 @@ public class dbhelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table_create_query="create table User(name text,bps text,bpd text,fhr text,cl text)";
+        String table_create_query="create table User(name text,bpsys text,bpdiast text,fhr text,clength text,afluid text," +
+                "fposition text,fpsub text,pposition text,ppsub text)";
         db.execSQL(table_create_query);
 
     }
@@ -66,32 +67,22 @@ public class dbhelper extends SQLiteOpenHelper {
     }
 
 
-    String enterdata(String villagename,String name,String age,String dob,String height,String weight,String gender,String maritalstatus,
-                     String familymembers,String familyincome,String occupation,String chiefcomplaints,String kco,String pasthistory,
-                     String habits,String probablediagnosis,String rx,String advice,String doctor){
+    String enterdata(String name,String bpsys,String bpdiast,String fhr,String clength,String afluid,String fposition,
+                     String fpsub,String pposition,String ppsub){
         try{
             SQLiteDatabase dbase=getWritableDatabase();
             ContentValues values=new ContentValues();
 
-            values.put("villagename",villagename);              //1
-            values.put("name",name);
-            values.put("age",age);
-            values.put("dob",dob);
-            values.put("height",height);            //5
-            values.put("weight",weight);
-            values.put("gender",gender);
-            values.put("maritalstatus",maritalstatus);
-            values.put("familymembers",familymembers);
-            values.put("familyincome",familyincome);          //10
-            values.put("occupation",occupation);
-            values.put("chiefcomplaints",chiefcomplaints);
-            values.put("kco",kco);
-            values.put("pasthistory",pasthistory);
-            values.put("habits",habits);            //15
-            values.put("probablediagnosis",probablediagnosis);
-            values.put("rx",rx);
-            values.put("advice",advice);
-            values.put("doctor",doctor);            //19
+            values.put("name",name);              //1
+            values.put("bpsys",bpsys);
+            values.put("bpdiast",bpdiast);
+            values.put("fhr",fhr);
+            values.put("clength",clength);            //5
+            values.put("afluid",afluid);
+            values.put("fposition",fposition);
+            values.put("fpsub",fpsub);
+            values.put("pposition",pposition);
+            values.put("ppsub",ppsub);
 
             dbase.insert("user",null,values);
 
