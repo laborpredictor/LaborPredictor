@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Predict" />
         <activity android:name=".ViewRecords" />
-        <activity android:name=".RecordDetail"></activity>
+        <activity android:name=".RecordDetail"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

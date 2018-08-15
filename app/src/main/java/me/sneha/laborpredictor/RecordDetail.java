@@ -27,12 +27,14 @@ public class RecordDetail extends AppCompatActivity {
         Bundle extras=getIntent().getExtras();
         String val=extras.getString("name");
 
+        setTitle(val);
+
         dbhelper db=new dbhelper(this);
         SQLiteDatabase dbase=db.getReadableDatabase();
 
         String q="select * from user where name='"+val+"'";
         Cursor cursor=dbase.rawQuery(q,null);
-        String[] str=new String[10];
+        String[] str=new String[10 ];
         for(int j=0;j<cursor.getCount();j++){
             cursor.moveToNext();
             str[0]=cursor.getString(0);
@@ -48,13 +50,13 @@ public class RecordDetail extends AppCompatActivity {
         }
 
 
-        name.setText(str[0]);
-        bps.setText(str[1]);
-        bpd.setText(str[2]);
-        fhr.setText(str[3]);
-        cl.setText(str[4]);
-        af.setText(str[5]);
-        fp.setText(str[6]+"-> "+str[7]);
-        pp.setText(str[8]+"-> "+str[9]);
+        name.setText(": "+str[0]);
+        bps.setText(": "+str[1]);
+        bpd.setText(": "+str[2]);
+        fhr.setText(": "+str[3]);
+        cl.setText(": "+str[4]);
+        af.setText(": "+str[5]);
+        fp.setText(": "+str[6]+"-> "+str[7]);
+        pp.setText(": "+str[8]+"-> "+str[9]);
     }
 }
