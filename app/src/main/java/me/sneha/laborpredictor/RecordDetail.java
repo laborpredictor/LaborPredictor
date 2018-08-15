@@ -56,7 +56,7 @@ public class RecordDetail extends AppCompatActivity {
         fhr.setText(": "+str[3]);
         cl.setText(": "+str[4]);
         af.setText(": "+str[5]);
-        fp.setText(": "+str[6]+"-> "+str[7]);
-        pp.setText(": "+str[8]+"-> "+str[9]);
+        fp.setText(": "+str[6]+"\n -> "+str[7]);
+        pp.setText(": "+str[8]+"\n -> "+str[9]);
     }
 }

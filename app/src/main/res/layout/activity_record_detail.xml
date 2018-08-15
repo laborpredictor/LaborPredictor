@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="900px"
-    android:layout_height="800px"
+    android:layout_height="wrap_content"
     android:background="#fff"
     tools:context=".RecordDetail">
 
@@ -38,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="BP Systolic"
@@ -45,6 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/bps"
@@ -64,6 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="BP Diastolic"
@@ -71,6 +74,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/bpd"
@@ -90,6 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="Fetus Heart Rate"
@@ -97,6 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/fhr"
@@ -116,6 +122,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="Cervix Length"
@@ -123,6 +130,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/cl"
@@ -142,6 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="Amniotic FLuid"
@@ -149,6 +158,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/af"
@@ -168,6 +178,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="Fetus Position"
@@ -175,6 +186,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/fp"
@@ -194,6 +206,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:text="Placenta Position"
@@ -201,6 +214,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
+            android:textSize="16dp"
             android:layout_gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/pp"
