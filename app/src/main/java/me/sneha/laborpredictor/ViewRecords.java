@@ -21,7 +21,7 @@ public class ViewRecords extends AppCompatActivity {
     EditText etSearchbar;
     SQLiteDatabase dbase;
     Cursor cursor;
-
+    String[] str;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,7 @@ public class ViewRecords extends AppCompatActivity {
         String q="select * from user";
         cursor=dbase.rawQuery(q,null);
 
-        String[] str=new String[cursor.getCount()];
+        str=new String[cursor.getCount()];
         for(int j=0;j<cursor.getCount();j++){
             cursor.moveToNext();
             str[j]=cursor.getString(0);
@@ -61,18 +61,25 @@ public class ViewRecords extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                int c=0;
                 Log.d("ViewRecords",s.toString());
-                String q="select * from user where name='"+s.toString()+"'";
-                cursor=dbase.rawQuery(q,null);
-
-                String[] str=new String[cursor.getCount()];
-                for(int j=0;j<cursor.getCount();j++){
-                    cursor.moveToNext();
-                    str[j]=cursor.getString(0);
+//                String q="select * from user where name='"+s.toString()+"'";
+                for(int i=0;i<str.length;i++){
+                    if(str[i].toLowerCase().contains(s.toString().toLowerCase())){
+                        c++;
+                    }
                 }
 
-                adp=new ArrayAdapter<>(ViewRecords.this,android.R.layout.simple_list_item_1,str);
+                String[] st=new String[c];
+                c=0;
+                for(int i=0;i<str.length;i++){
+                    if(str[i].toLowerCase().contains(s.toString().toLowerCase())){
+                        st[c]=str[i];
+                        c++;
+                    }
+                }
+
+                adp=new ArrayAdapter<>(ViewRecords.this,android.R.layout.simple_list_item_1,st);
                 lvRecords.setAdapter(adp);
             }
 
