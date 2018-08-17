@@ -4,6 +4,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class RecordDetail extends AppCompatActivity {
@@ -58,5 +61,9 @@ public class RecordDetail extends AppCompatActivity {
         af.setText(": "+str[5]);
         fp.setText(": "+str[6]+"\n -> "+str[7]);
         pp.setText(": "+str[8]+"\n -> "+str[9]);
+
+
     }
+
+
 }
