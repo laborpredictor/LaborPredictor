@@ -25,6 +25,12 @@ public class Predict extends AppCompatActivity {
     String[] strPPNormalSubtype={"Posterior","Anterior"};
     String[] strPPAbnormalSubtype={"Low Lying","Placental Abruption","Placenta Bleeding","Placenta Pravia"};
     Button btnSubmit;
+    double nfhrn=1,nfhra=0,nbpn=1,nbpa=0,ncln=1,ncla=0,ncephalic=0.875,nvertex=0.0416666667,ntransverse=0.0416666667,
+            nbreech=0.0416666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
+            nafyn=0.2916666667,nafya=0.7083333333;
+    double cfhrn=1,cfhra=0,cbpn=1,cbpa=0,ccln=1,ccla=0,ccephalic=0.875,cvertex=0.0416666667,ctransverse=0.0416666667,
+            cbreech=0.0416666667,cposterior=0.3333333333,canterior=0.6666666667,cpbleeding=0,cppravia=0,
+            cafyn=0.2916666667,cafya=0.7083333333;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,14 +86,15 @@ public class Predict extends AppCompatActivity {
                 if(!etName.getText().toString().isEmpty() && !etBPSystol.getText().toString().isEmpty() && !etBPDiastol.getText().toString().isEmpty()
                         && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty()){
 
-                    dbhelper db=new dbhelper(Predict.this);
-                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
-                            etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
-                            etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
-                            spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
-                    if(result.equalsIgnoreCase("success")) {
-                        Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
-                    }
+//                    dbhelper db=new dbhelper(Predict.this);
+//                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
+//                            etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
+//                            etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
+//                            spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
+//                    if(result.equalsIgnoreCase("success")) {
+//                        Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
+//                        onBackPressed();
+//                    }
 
                 }
 

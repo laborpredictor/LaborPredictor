@@ -27,7 +27,7 @@ public class Splash extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 Log.d("tick",""+millisUntilFinished/500);
                 if(((int)millisUntilFinished/1000)==0){
-                    pd.show();
+                    //pd.show();
                 }
 
             }
