@@ -20,10 +20,10 @@ public class Predict extends AppCompatActivity {
     Spinner spFPType,spFPSubtype,spPPType,spPPSubtype;
     ArrayAdapter<String> adpType,adpFPNormalSubtype,adpFPAbnormalSubtype,adpPPNormalSubtype,adpPPAbnormalSubtype;
     String[] strType={"Normal","Abnormal"};
-    String[] strFPNormalSubtype={"Cephalic"};
-    String[] strFPAbnormalSubtype={"Occipito","Shoulder","Breech","Brow"};
+    String[] strFPNormalSubtype={"Cephalic","Transverse"};
+    String[] strFPAbnormalSubtype={"Vertex","Occipito","Shoulder","Breech","Brow"};
     String[] strPPNormalSubtype={"Posterior","Anterior"};
-    String[] strPPAbnormalSubtype={"Low Lying","Placental Abruption"};
+    String[] strPPAbnormalSubtype={"Low Lying","Placental Abruption","Placenta Bleeding","Placenta Pravia"};
     Button btnSubmit;
 
     @Override
@@ -81,14 +81,14 @@ public class Predict extends AppCompatActivity {
                         && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty()){
 
                     dbhelper db=new dbhelper(Predict.this);
-                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
+                 /*   String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
                             etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
                             etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
                             spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
                     if(result.equalsIgnoreCase("success")) {
                         Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
                     }
-
+                 */
                 }
 
             }
