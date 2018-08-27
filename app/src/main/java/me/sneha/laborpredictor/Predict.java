@@ -81,14 +81,14 @@ public class Predict extends AppCompatActivity {
                         && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty()){
 
                     dbhelper db=new dbhelper(Predict.this);
-                 /*   String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
+                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
                             etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
                             etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
                             spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
                     if(result.equalsIgnoreCase("success")) {
                         Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
                     }
-                 */
+
                 }
 
             }
