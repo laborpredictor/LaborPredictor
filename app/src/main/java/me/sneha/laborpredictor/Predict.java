@@ -127,7 +127,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl normal:"+normal);
 
-                    if(Integer.parseInt(etAF.getText().toString())<8 && Integer.parseInt(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
                         normal=normal*nafyn;
                     }
                     else{
@@ -191,7 +191,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etAF.getText().toString())<8 && Integer.parseInt(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
                         ceasar=ceasar*cafyn;
                     }
                     else{
