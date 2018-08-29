@@ -58,6 +58,7 @@ public class Predict extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                normal=1;ceasar=1;
                 /*View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
 
                 Toast tl=new Toast(Predict.this);
@@ -228,7 +229,11 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","pp ceasar:"+ceasar);
 
-                    Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
+                    if(normal>ceasar)
+//                        Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Predict.this, "Delivery can be Normal !", Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(Predict.this, "Delivery can be Ceaserian !", Toast.LENGTH_LONG).show();
                 }
 
             }
