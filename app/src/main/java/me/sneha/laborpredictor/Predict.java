@@ -45,7 +45,6 @@ public class Predict extends AppCompatActivity {
         etBPDiastol=findViewById(R.id.etBPDiastol);
         etFW=findViewById(R.id.etFW);
         etFHR=findViewById(R.id.etFHR);
-        //
         etCL=findViewById(R.id.etCL);
         etAF=findViewById(R.id.etAF);
 
