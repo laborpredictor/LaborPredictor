@@ -25,12 +25,12 @@ public class Predict extends AppCompatActivity {
     String[] strPPNormalSubtype={"Posterior","Anterior"};
     String[] strPPAbnormalSubtype={"Placental Abruption","Placenta Bleeding","Placenta Pravia"};
     Button btnSubmit;
-    double nfhrn=1,nfhra=0,nbpn=1,nbpa=0,ncln=1,ncla=0,ncephalic=0.875,nvertex=0.0416666667,ntransverse=0.0416666667,
-            nbreech=0.0416666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
-            nafyn=0.2916666667,nafya=0.7083333333;
+    double nfhrn=1,nfhra=0,nbpn=1,nbpa=0,ncln=1,ncla=0,ncephalic=0.916667,ntransverse=0.0416666667,
+            nbreech=0.041666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
+            nafyn=0.2916666667,nafya=0.7083333333,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
     double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.375,cvertex=0.25,ctransverse=0.0625,
             cbreech=0.3125,cposterior=0.4375,canterior=0.4375,cpbleeding=0.0625,cppravia=0.0625,
-            cafyn=0.4375,cafya=0.5625;
+            cafyn=0.4375,cafya=0.5625,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
     double evidenceN=0.6,evidenceC=0.4;
     double normal=1,ceasar=1;
 
@@ -99,7 +99,9 @@ public class Predict extends AppCompatActivity {
 //                        onBackPressed();
 //                    }
 
-                    if(Integer.parseInt(etBPSystol.getText().toString())>125 || Integer.parseInt(etBPDiastol.getText().toString())>90){
+                    //for normal
+
+                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
                         normal=normal*evidenceN*nbpn;
                     }
                     else{
@@ -130,20 +132,90 @@ public class Predict extends AppCompatActivity {
                     switch (spFPSubtype.getSelectedItem().toString().trim()){
                         case "Cephalic":normal=normal*ncephalic;
                             break;
-                        case "Vertex":normal=normal*nvertex;
-                            break;
                         case "Transverse":normal=normal*ntransverse;
                             break;
-                        case "Occipito":
+                        case "Occipito":normal=normal*noccipito;
                             break;
-                        case "Shoulder":
+                        case "Shoulder":normal=normal*nshoulder;
                             break;
                         case "Breech":normal=normal*nbreech;
                             break;
-                        case "Brow":
+                        case "Brow":normal=normal*nbrow;
                             break;
                     }
 
+                    switch(spPPSubtype.getSelectedItem().toString().trim()){
+                        case "Posterior":normal=normal*nposterior;
+                            break;
+                        case "Anterior":normal=normal*nanterior;
+                            break;
+                        case "Placental Abruption":normal=normal*nplacabr;
+                            break;
+                        case "Placenta Bleeding":normal=normal*npbleeding;
+                            break;
+                        case "Placenta Pravia":normal=normal*nppravia;
+                            break;
+                    }
+
+                    //for ceasar
+
+                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
+                        ceasar=ceasar*evidenceC*cbpn;
+                    }
+                    else{
+                        ceasar=ceasar*evidenceC*cbpa;
+                    }
+
+                    if(Integer.parseInt(etFHR.getText().toString())>165 && Integer.parseInt(etFHR.getText().toString())<105){
+                        ceasar=ceasar*cfhrn;
+                    }
+                    else{
+                        ceasar=ceasar*cfhra;
+                    }
+
+                    if(Double.parseDouble(etCL.getText().toString())>2.2 ){
+                        ceasar=ceasar*ccln;
+                    }
+                    else{
+                        ceasar=ceasar*ccla;
+                    }
+
+                    if(Integer.parseInt(etAF.getText().toString())>8 && Integer.parseInt(etAF.getText().toString())<5){
+                        ceasar=ceasar*cafyn;
+                    }
+                    else{
+                        ceasar=ceasar*cafya;
+                    }
+
+                    switch (spFPSubtype.getSelectedItem().toString().trim()){
+                        case "Cephalic":ceasar=ceasar*ccephalic;
+                            break;
+                        case "Transverse":ceasar=ceasar*ctransverse;
+                            break;
+                        case "Occipito":ceasar=ceasar*coccipito;
+                            break;
+                        case "Shoulder":ceasar=ceasar*cshoulder;
+                            break;
+                        case "Breech":ceasar=ceasar*cbreech;
+                            break;
+                        case "Brow":ceasar=ceasar*cbrow;
+                            break;
+                    }
+
+                    switch(spPPSubtype.getSelectedItem().toString().trim()){
+                        case "Posterior":ceasar=ceasar*cposterior;
+                            break;
+                        case "Anterior":ceasar=ceasar*canterior;
+                            break;
+                        case "Placental Abruption":ceasar=ceasar*cplacabr;
+                            break;
+                        case "Placenta Bleeding":ceasar=ceasar*cpbleeding;
+                            break;
+                        case "Placenta Pravia":ceasar=ceasar*cppravia;
+                            break;
+                    }
+
+                    Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
                 }
 
             }
