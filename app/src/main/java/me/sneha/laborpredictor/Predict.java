@@ -4,6 +4,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -107,13 +108,15 @@ public class Predict extends AppCompatActivity {
                     else{
                         normal=normal*evidenceN*nbpa;
                     }
+                    Log.d("laborp","bp normal:"+normal);
 
-                    if(Integer.parseInt(etFHR.getText().toString())>165 && Integer.parseInt(etFHR.getText().toString())<105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
                         normal=normal*nfhrn;
                     }
                     else{
                         normal=normal*nfhra;
                     }
+                    Log.d("laborp","fhr normal:"+normal);
 
                     if(Double.parseDouble(etCL.getText().toString())>2.2 ){
                         normal=normal*ncln;
@@ -121,13 +124,15 @@ public class Predict extends AppCompatActivity {
                     else{
                         normal=normal*ncla;
                     }
+                    Log.d("laborp","cl normal:"+normal);
 
-                    if(Integer.parseInt(etAF.getText().toString())>8 && Integer.parseInt(etAF.getText().toString())<5){
+                    if(Integer.parseInt(etAF.getText().toString())<8 && Integer.parseInt(etAF.getText().toString())>5){
                         normal=normal*nafyn;
                     }
                     else{
                         normal=normal*nafya;
                     }
+                    Log.d("laborp","afy normal:"+normal);
 
                     switch (spFPSubtype.getSelectedItem().toString().trim()){
                         case "Cephalic":normal=normal*ncephalic;
@@ -143,6 +148,7 @@ public class Predict extends AppCompatActivity {
                         case "Brow":normal=normal*nbrow;
                             break;
                     }
+                    Log.d("laborp","fp normal:"+normal);
 
                     switch(spPPSubtype.getSelectedItem().toString().trim()){
                         case "Posterior":normal=normal*nposterior;
@@ -156,6 +162,7 @@ public class Predict extends AppCompatActivity {
                         case "Placenta Pravia":normal=normal*nppravia;
                             break;
                     }
+                    Log.d("laborp","pp normal:"+normal);
 
                     //for ceasar
 
@@ -165,13 +172,15 @@ public class Predict extends AppCompatActivity {
                     else{
                         ceasar=ceasar*evidenceC*cbpa;
                     }
+                    Log.d("laborp","bp ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etFHR.getText().toString())>165 && Integer.parseInt(etFHR.getText().toString())<105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
                         ceasar=ceasar*cfhrn;
                     }
                     else{
                         ceasar=ceasar*cfhra;
                     }
+                    Log.d("laborp","fhr ceasar:"+ceasar);
 
                     if(Double.parseDouble(etCL.getText().toString())>2.2 ){
                         ceasar=ceasar*ccln;
@@ -179,13 +188,15 @@ public class Predict extends AppCompatActivity {
                     else{
                         ceasar=ceasar*ccla;
                     }
+                    Log.d("laborp","cl ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etAF.getText().toString())>8 && Integer.parseInt(etAF.getText().toString())<5){
+                    if(Integer.parseInt(etAF.getText().toString())<8 && Integer.parseInt(etAF.getText().toString())>5){
                         ceasar=ceasar*cafyn;
                     }
                     else{
                         ceasar=ceasar*cafya;
                     }
+                    Log.d("laborp","afy ceasar:"+ceasar);
 
                     switch (spFPSubtype.getSelectedItem().toString().trim()){
                         case "Cephalic":ceasar=ceasar*ccephalic;
@@ -201,6 +212,7 @@ public class Predict extends AppCompatActivity {
                         case "Brow":ceasar=ceasar*cbrow;
                             break;
                     }
+                    Log.d("laborp","fp ceasar:"+ceasar);
 
                     switch(spPPSubtype.getSelectedItem().toString().trim()){
                         case "Posterior":ceasar=ceasar*cposterior;
@@ -214,6 +226,7 @@ public class Predict extends AppCompatActivity {
                         case "Placenta Pravia":ceasar=ceasar*cppravia;
                             break;
                     }
+                    Log.d("laborp","pp ceasar:"+ceasar);
 
                     Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
                 }
