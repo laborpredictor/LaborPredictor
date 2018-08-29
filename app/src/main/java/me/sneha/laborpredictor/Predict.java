@@ -38,7 +38,7 @@ public class Predict extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_predict);
-        //
+
         etName=findViewById(R.id.etName);
         etAge=findViewById(R.id.etAge);
         etBPSystol=findViewById(R.id.etBPSystol);
