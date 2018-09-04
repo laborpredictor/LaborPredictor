@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class Predict extends AppCompatActivity {
 
-    EditText etName,etAge,etBPSystol,etBPDiastol,etFW,etFHR,etCL,etAF;
+    EditText etName,etBPSystol,etBPDiastol,etFW,etFHR,etCL,etAF;
     Spinner spFPType,spFPSubtype,spPPType,spPPSubtype;
     ArrayAdapter<String> adpType,adpFPNormalSubtype,adpFPAbnormalSubtype,adpPPNormalSubtype,adpPPAbnormalSubtype;
     String[] strType={"Normal","Abnormal"};
@@ -41,7 +41,7 @@ public class Predict extends AppCompatActivity {
         setContentView(R.layout.activity_predict);
 
         etName=findViewById(R.id.etName);
-        etAge=findViewById(R.id.etAge);
+       // etAge=findViewById(R.id.etAge);
         etBPSystol=findViewById(R.id.etBPSystol);
         etBPDiastol=findViewById(R.id.etBPDiastol);
         etFW=findViewById(R.id.etFW);
