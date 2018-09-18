@@ -97,7 +97,8 @@ public class Predict extends AppCompatActivity {
 
                     //for normal
 
-                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
                         normal=normal*evidenceN*nbpn;
                     }
                     else{
@@ -105,7 +106,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","bp normal:"+normal);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
                         normal=normal*nfhrn;
                     }
                     else{
@@ -121,7 +122,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl normal:"+normal);
 
-                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
                         normal=normal*nafyn;
                     }
                     else{
@@ -161,7 +162,8 @@ public class Predict extends AppCompatActivity {
 
                     //for ceasar
 
-                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
                         ceasar=ceasar*evidenceC*cbpn;
                     }
                     else{
@@ -169,7 +171,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","bp ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
                         ceasar=ceasar*cfhrn;
                     }
                     else{
@@ -185,7 +187,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl ceasar:"+ceasar);
 
-                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
                         ceasar=ceasar*cafyn;
                     }
                     else{
