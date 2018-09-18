@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class RecordDetail extends AppCompatActivity {
 
-    TextView name,bps,bpd,fhr,cl,af,fp,pp,tvResult;
+    TextView name,bps,bpd,fhr,cl,af,fp,pp,tvResult,tvResTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class RecordDetail extends AppCompatActivity {
         fp=findViewById(R.id.fp);
         pp=findViewById(R.id.pp);
         tvResult=findViewById(R.id.tvResult);
+        tvResTitle=findViewById(R.id.tvResTitle);
 
         Bundle extras=getIntent().getExtras();
         String val=extras.getString("name");
@@ -64,10 +65,14 @@ public class RecordDetail extends AppCompatActivity {
         af.setText(": "+str[5]);
         fp.setText(": "+str[6]+" -> "+str[7]);
         pp.setText(": "+str[8]+" -> "+str[9]);
-        if(str[10].equalsIgnoreCase("ceaserian"))
+        if(str[10].equalsIgnoreCase("ceaserian")) {
             tvResult.setTextColor(Color.RED);
-        else
-            tvResult.setTextColor(Color.GREEN);
+            tvResTitle.setTextColor(Color.RED);
+        }
+        else {
+            tvResult.setTextColor(Color.rgb(0, 175, 0));
+            tvResTitle.setTextColor(Color.rgb(0, 175, 0));
+        }
         tvResult.setText(": "+str[10]);
 
 

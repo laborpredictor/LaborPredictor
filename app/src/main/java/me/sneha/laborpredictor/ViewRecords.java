@@ -41,7 +41,8 @@ public class ViewRecords extends AppCompatActivity {
             str[j]=cursor.getString(0);
         }
 
-        adp=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,str);
+//        adp=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,str);
+        adp=new ArrayAdapter<>(this,R.layout.mylistitem ,str);
         lvRecords.setAdapter(adp);
 
         lvRecords.setOnItemClickListener(new AdapterView.OnItemClickListener() {
