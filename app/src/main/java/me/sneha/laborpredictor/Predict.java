@@ -28,10 +28,10 @@ public class Predict extends AppCompatActivity {
     Button btnSubmit;
     double nfhrn=1,nfhra=0,nbpn=1,nbpa=0,ncln=1,ncla=0,ncephalic=0.916667,ntransverse=0.0416666667,
             nbreech=0.041666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
-            nafyn=0.2916666667,nafya=0.7083333333,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
-    double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.375,cvertex=0.25,ctransverse=0.0625,
+            nafyn=0.833333333,nafya=0.166666667,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
+    double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.625,ctransverse=0.0625,
             cbreech=0.3125,cposterior=0.4375,canterior=0.4375,cpbleeding=0.0625,cppravia=0.0625,
-            cafyn=0.4375,cafya=0.5625,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
+            cafyn=0.625,cafya=0.375,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
     double evidenceN=0.6,evidenceC=0.4;
     double normal=1,ceasar=1;
 
