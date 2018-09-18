@@ -1,5 +1,6 @@
-package me.sneha.laborpredictor;
+ package me.sneha.laborpredictor;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class Predict extends AppCompatActivity {
             cafyn=0.625,cafya=0.375,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
     double evidenceN=0.6,evidenceC=0.4;
     double normal=1,ceasar=1;
+    String res="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,15 +93,7 @@ public class Predict extends AppCompatActivity {
                         && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty())
                 {
 
-//                    dbhelper db=new dbhelper(Predict.this);
-//                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
-//                            etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
-//                            etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
-//                            spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
-//                    if(result.equalsIgnoreCase("success")) {
-//                        Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
-//                        onBackPressed();
-//                    }
+
 
                     //for normal
 
@@ -229,11 +223,29 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","pp ceasar:"+ceasar);
 
-                    if(normal>ceasar)
+                    if(normal>ceasar) {
 //                        Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(Predict.this, "Delivery can be Normal !", Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(Predict.this, "Delivery can be Ceaserian !", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(Predict.this, "Delivery can be Normal !", Toast.LENGTH_LONG).show();
+                        res="Normal";
+                    }
+                    else {
+//                        Toast.makeText(Predict.this, "Delivery can be Ceaserian !", Toast.LENGTH_LONG).show();
+                        res="Ceaserian";
+                    }
+
+                    Intent i=new Intent(Predict.this, me.sneha.laborpredictor.result.class);
+                    i.putExtra("name",etName.getText().toString().trim());
+                    i.putExtra("bpsys",etBPSystol.getText().toString().trim());
+                    i.putExtra("bpdias",etBPDiastol.getText().toString().trim());
+                    i.putExtra("fhr",etFHR.getText().toString().trim());
+                    i.putExtra("cl",etCL.getText().toString().trim());
+                    i.putExtra("af",etAF.getText().toString().trim());
+                    i.putExtra("fp",spFPType.getSelectedItem().toString().trim());
+                    i.putExtra("fpsub",spFPSubtype.getSelectedItem().toString().trim());
+                    i.putExtra("pp",spPPType.getSelectedItem().toString().trim());
+                    i.putExtra("ppsub",spPPSubtype.getSelectedItem().toString().trim());
+                    i.putExtra("res",res);
+                    startActivity(i);
                 }
 
             }
