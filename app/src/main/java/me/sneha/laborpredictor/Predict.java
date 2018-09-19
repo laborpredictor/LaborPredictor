@@ -101,35 +101,43 @@ public class Predict extends AppCompatActivity {
                     if((Integer.parseInt(etBPSystol.getText().toString())<131 && Integer.parseInt(etBPSystol.getText().toString())>109 )
                             && (Integer.parseInt(etBPDiastol.getText().toString())<91 && Integer.parseInt(etBPDiastol.getText().toString())>69)){
                         normal=normal*evidenceN*nbpn;
+                        Log.d("laborp","bp normal:"+normal);
                     }
                     else{
                         normal=normal*evidenceN*nbpa;
+                        Log.d("laborp","bp abnormal:"+normal);
                     }
-                    Log.d("laborp","bp normal:"+normal);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
+
+                    if(Integer.parseInt(etFHR.getText().toString())<166 && Integer.parseInt(etFHR.getText().toString())>99){
                         normal=normal*nfhrn;
+                        Log.d("laborp","fhr normal:"+normal);
                     }
                     else{
                         normal=normal*nfhra;
+                        Log.d("laborp","fhr abnormal:"+normal);
                     }
-                    Log.d("laborp","fhr normal:"+normal);
+
 
                     if(Double.parseDouble(etCL.getText().toString())>2.2 ){
                         normal=normal*ncln;
+                        Log.d("laborp","cl normal:"+normal);
                     }
                     else{
                         normal=normal*ncla;
+                        Log.d("laborp","cl abnormal:"+normal);
                     }
-                    Log.d("laborp","cl normal:"+normal);
 
-                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
+
+                    if(Double.parseDouble(etAF.getText().toString())<19 && Double.parseDouble(etAF.getText().toString())>6){
                         normal=normal*nafyn;
+                        Log.d("laborp","afy normal:"+normal);
                     }
                     else{
                         normal=normal*nafya;
+                        Log.d("laborp","afy abnormal:"+normal);
                     }
-                    Log.d("laborp","afy normal:"+normal);
+
 
                     switch (spFPSubtype.getSelectedItem().toString().trim()){
                         case "Cephalic":normal=normal*ncephalic;
@@ -166,35 +174,43 @@ public class Predict extends AppCompatActivity {
                     if((Integer.parseInt(etBPSystol.getText().toString())<131 && Integer.parseInt(etBPSystol.getText().toString())>109 )
                             && (Integer.parseInt(etBPDiastol.getText().toString())<91 && Integer.parseInt(etBPDiastol.getText().toString())>69)){
                         ceasar=ceasar*evidenceC*cbpn;
+                        Log.d("laborp","bp ceasar:"+ceasar);
                     }
                     else{
                         ceasar=ceasar*evidenceC*cbpa;
+                        Log.d("laborp","bp abceasar:"+ceasar);
                     }
-                    Log.d("laborp","bp ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
+
+                    if(Integer.parseInt(etFHR.getText().toString())<166 && Integer.parseInt(etFHR.getText().toString())>99){
                         ceasar=ceasar*cfhrn;
+                        Log.d("laborp","fhr ceasar:"+ceasar);
                     }
                     else{
                         ceasar=ceasar*cfhra;
+                        Log.d("laborp","fhr abceasar:"+ceasar);
                     }
-                    Log.d("laborp","fhr ceasar:"+ceasar);
+
 
                     if(Double.parseDouble(etCL.getText().toString())>2.2 ){
                         ceasar=ceasar*ccln;
+                        Log.d("laborp","cl ceasar:"+ceasar);
                     }
                     else{
                         ceasar=ceasar*ccla;
+                        Log.d("laborp","cl abceasar:"+ceasar);
                     }
-                    Log.d("laborp","cl ceasar:"+ceasar);
 
-                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
+
+                    if(Double.parseDouble(etAF.getText().toString())<19 && Double.parseDouble(etAF.getText().toString())>6){
                         ceasar=ceasar*cafyn;
+                        Log.d("laborp","afy ceasar:"+ceasar);
                     }
                     else{
                         ceasar=ceasar*cafya;
+                        Log.d("laborp","afy abceasar:"+ceasar);
                     }
-                    Log.d("laborp","afy ceasar:"+ceasar);
+
 
                     switch (spFPSubtype.getSelectedItem().toString().trim()){
                         case "Cephalic":ceasar=ceasar*ccephalic;
