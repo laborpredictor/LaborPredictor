@@ -18,7 +18,7 @@ public class dbhelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String table_create_query="create table User(name text,bpsys text,bpdiast text,fhr text,clength text,afluid text," +
-                "fposition text,fpsub text,pposition text,ppsub text)";
+                "fposition text,fpsub text,pposition text,ppsub text,result text)";
         db.execSQL(table_create_query);
 
     }
@@ -68,7 +68,7 @@ public class dbhelper extends SQLiteOpenHelper {
 
 
     String enterdata(String name,String bpsys,String bpdiast,String fhr,String clength,String afluid,String fposition,
-                     String fpsub,String pposition,String ppsub){
+                     String fpsub,String pposition,String ppsub,String res){
         try{
             SQLiteDatabase dbase=getWritableDatabase();
             ContentValues values=new ContentValues();
@@ -83,6 +83,7 @@ public class dbhelper extends SQLiteOpenHelper {
             values.put("fpsub",fpsub);
             values.put("pposition",pposition);
             values.put("ppsub",ppsub);
+            values.put("result",res);
 
             dbase.insert("user",null,values);
 

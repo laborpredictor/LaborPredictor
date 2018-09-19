@@ -2,6 +2,7 @@ package me.sneha.laborpredictor;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 public class RecordDetail extends AppCompatActivity {
 
-    TextView name,bps,bpd,fhr,cl,af,fp,pp;
+    TextView name,bps,bpd,fhr,cl,af,fp,pp,tvResult,tvResTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,8 @@ public class RecordDetail extends AppCompatActivity {
         af=findViewById(R.id.af);
         fp=findViewById(R.id.fp);
         pp=findViewById(R.id.pp);
+        tvResult=findViewById(R.id.tvResult);
+        tvResTitle=findViewById(R.id.tvResTitle);
 
         Bundle extras=getIntent().getExtras();
         String val=extras.getString("name");
@@ -37,7 +40,7 @@ public class RecordDetail extends AppCompatActivity {
 
         String q="select * from user where name='"+val+"'";
         Cursor cursor=dbase.rawQuery(q,null);
-        String[] str=new String[10 ];
+        String[] str=new String[11 ];
         for(int j=0;j<cursor.getCount();j++){
             cursor.moveToNext();
             str[0]=cursor.getString(0);
@@ -50,6 +53,7 @@ public class RecordDetail extends AppCompatActivity {
             str[7]=cursor.getString(7);
             str[8]=cursor.getString(8);
             str[9]=cursor.getString(9);
+            str[10]=cursor.getString(10);
         }
 
 
@@ -59,8 +63,18 @@ public class RecordDetail extends AppCompatActivity {
         fhr.setText(": "+str[3]);
         cl.setText(": "+str[4]);
         af.setText(": "+str[5]);
-        fp.setText(": "+str[6]+"\n -> "+str[7]);
-        pp.setText(": "+str[8]+"\n -> "+str[9]);
+        fp.setText(": "+str[6]+" -> "+str[7]);
+        pp.setText(": "+str[8]+" -> "+str[9]);
+        if(str[10].equalsIgnoreCase("ceaserian")) {
+            tvResult.setTextColor(Color.RED);
+            tvResTitle.setTextColor(Color.RED);
+        }
+        else {
+            tvResult.setTextColor(Color.rgb(0, 175, 0));
+            tvResTitle.setTextColor(Color.rgb(0, 175, 0));
+        }
+        tvResult.setText(": "+str[10]);
+
 
 
     }

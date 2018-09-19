@@ -1,5 +1,6 @@
-package me.sneha.laborpredictor;
+ package me.sneha.laborpredictor;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,12 +29,13 @@ public class Predict extends AppCompatActivity {
     Button btnSubmit;
     double nfhrn=1,nfhra=0,nbpn=1,nbpa=0,ncln=1,ncla=0,ncephalic=0.916667,ntransverse=0.0416666667,
             nbreech=0.041666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
-            nafyn=0.2916666667,nafya=0.7083333333,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
-    double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.375,cvertex=0.25,ctransverse=0.0625,
+            nafyn=0.833333333,nafya=0.166666667,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
+    double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.625,ctransverse=0.0625,
             cbreech=0.3125,cposterior=0.4375,canterior=0.4375,cpbleeding=0.0625,cppravia=0.0625,
-            cafyn=0.4375,cafya=0.5625,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
+            cafyn=0.625,cafya=0.375,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
     double evidenceN=0.6,evidenceC=0.4;
     double normal=1,ceasar=1;
+    String res="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,19 +93,12 @@ public class Predict extends AppCompatActivity {
                         && !etFHR.getText().toString().isEmpty() && !etCL.getText().toString().isEmpty() &&!etAF.getText().toString().isEmpty())
                 {
 
-//                    dbhelper db=new dbhelper(Predict.this);
-//                    String result=db.enterdata(etName.getText().toString().trim(),etBPSystol.getText().toString().trim(),
-//                            etBPDiastol.getText().toString().trim(),etFHR.getText().toString().trim(),etCL.getText().toString().trim(),
-//                            etAF.getText().toString().trim(),spFPType.getSelectedItem().toString().trim(),spFPSubtype.getSelectedItem().toString().trim(),
-//                            spPPType.getSelectedItem().toString().trim(),spPPSubtype.getSelectedItem().toString().trim());
-//                    if(result.equalsIgnoreCase("success")) {
-//                        Toast.makeText(Predict.this, "Submitted !", Toast.LENGTH_SHORT).show();
-//                        onBackPressed();
-//                    }
+
 
                     //for normal
 
-                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
                         normal=normal*evidenceN*nbpn;
                     }
                     else{
@@ -111,7 +106,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","bp normal:"+normal);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
                         normal=normal*nfhrn;
                     }
                     else{
@@ -127,7 +122,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl normal:"+normal);
 
-                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
                         normal=normal*nafyn;
                     }
                     else{
@@ -167,7 +162,8 @@ public class Predict extends AppCompatActivity {
 
                     //for ceasar
 
-                    if(Integer.parseInt(etBPSystol.getText().toString())<125 || Integer.parseInt(etBPDiastol.getText().toString())<90){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
                         ceasar=ceasar*evidenceC*cbpn;
                     }
                     else{
@@ -175,7 +171,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","bp ceasar:"+ceasar);
 
-                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>105){
+                    if(Integer.parseInt(etFHR.getText().toString())<165 && Integer.parseInt(etFHR.getText().toString())>100){
                         ceasar=ceasar*cfhrn;
                     }
                     else{
@@ -191,7 +187,7 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","cl ceasar:"+ceasar);
 
-                    if(Double.parseDouble(etAF.getText().toString())<8 && Double.parseDouble(etAF.getText().toString())>5){
+                    if(Double.parseDouble(etAF.getText().toString())<18 && Double.parseDouble(etAF.getText().toString())>7){
                         ceasar=ceasar*cafyn;
                     }
                     else{
@@ -229,11 +225,29 @@ public class Predict extends AppCompatActivity {
                     }
                     Log.d("laborp","pp ceasar:"+ceasar);
 
-                    if(normal>ceasar)
+                    if(normal>ceasar) {
 //                        Toast.makeText(Predict.this, "Normal="+normal+"\nCeasar="+ceasar, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(Predict.this, "Delivery can be Normal !", Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(Predict.this, "Delivery can be Ceaserian !", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(Predict.this, "Delivery can be Normal !", Toast.LENGTH_LONG).show();
+                        res="Normal";
+                    }
+                    else {
+//                        Toast.makeText(Predict.this, "Delivery can be Ceaserian !", Toast.LENGTH_LONG).show();
+                        res="Ceaserian";
+                    }
+
+                    Intent i=new Intent(Predict.this, me.sneha.laborpredictor.result.class);
+                    i.putExtra("name",etName.getText().toString().trim());
+                    i.putExtra("bpsys",etBPSystol.getText().toString().trim());
+                    i.putExtra("bpdias",etBPDiastol.getText().toString().trim());
+                    i.putExtra("fhr",etFHR.getText().toString().trim());
+                    i.putExtra("cl",etCL.getText().toString().trim());
+                    i.putExtra("af",etAF.getText().toString().trim());
+                    i.putExtra("fp",spFPType.getSelectedItem().toString().trim());
+                    i.putExtra("fpsub",spFPSubtype.getSelectedItem().toString().trim());
+                    i.putExtra("pp",spPPType.getSelectedItem().toString().trim());
+                    i.putExtra("ppsub",spPPSubtype.getSelectedItem().toString().trim());
+                    i.putExtra("res",res);
+                    startActivity(i);
                 }
 
             }
