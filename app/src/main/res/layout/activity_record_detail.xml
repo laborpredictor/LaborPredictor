@@ -16,14 +16,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Name"
+            android:text=" Name"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/name"
             android:layout_weight="2"
@@ -39,20 +39,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="BP Systolic"
+            android:text=" BP Systolic"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/bps"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -67,20 +67,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="BP Diastolic"
+            android:text=" BP Diastolic"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/bpd"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -95,20 +95,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Fetus Heart Rate"
+            android:text=" Fetus Heart Rate"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/fhr"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -123,20 +123,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Cervix Length"
+            android:text=" Cervix Length"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/cl"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -151,20 +151,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Amniotic FLuid"
+            android:text=" Amniotic FLuid"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/af"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -179,20 +179,20 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Fetus Position"
+            android:text=" Fetus Position"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/fp"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <Space
@@ -207,19 +207,53 @@
         android:layout_height="wrap_content">
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
-            android:text="Placenta Position"
+            android:text=" Placenta Position"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
         <TextView
             android:textSize="16dp"
-            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:textColor="#000"
             android:id="@+id/pp"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:background="@drawable/border"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvResTitle"
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:text=" Result"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:id="@+id/tvResult"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
 </LinearLayout>
