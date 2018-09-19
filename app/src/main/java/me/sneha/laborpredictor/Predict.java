@@ -61,6 +61,7 @@ public class Predict extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 normal=1;ceasar=1;
+                Log.d("laborp","clicked "+normal+" "+ceasar);
                 /*View layout1=getLayoutInflater().inflate(R.layout.custom_toast,null);
 
                 Toast tl=new Toast(Predict.this);
@@ -97,8 +98,8 @@ public class Predict extends AppCompatActivity {
 
                     //for normal
 
-                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
-                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<131 && Integer.parseInt(etBPSystol.getText().toString())>109 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<91 && Integer.parseInt(etBPDiastol.getText().toString())>69)){
                         normal=normal*evidenceN*nbpn;
                     }
                     else{
@@ -162,8 +163,8 @@ public class Predict extends AppCompatActivity {
 
                     //for ceasar
 
-                    if((Integer.parseInt(etBPSystol.getText().toString())<130 && Integer.parseInt(etBPSystol.getText().toString())>110 )
-                            && (Integer.parseInt(etBPDiastol.getText().toString())<90 && Integer.parseInt(etBPDiastol.getText().toString())>70)){
+                    if((Integer.parseInt(etBPSystol.getText().toString())<131 && Integer.parseInt(etBPSystol.getText().toString())>109 )
+                            && (Integer.parseInt(etBPDiastol.getText().toString())<91 && Integer.parseInt(etBPDiastol.getText().toString())>69)){
                         ceasar=ceasar*evidenceC*cbpn;
                     }
                     else{
