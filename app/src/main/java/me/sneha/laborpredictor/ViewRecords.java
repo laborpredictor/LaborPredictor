@@ -38,7 +38,7 @@ public class ViewRecords extends AppCompatActivity {
         str=new String[cursor.getCount()];
         for(int j=0;j<cursor.getCount();j++){
             cursor.moveToNext();
-            str[j]=cursor.getString(0);
+            str[j]=" "+cursor.getString(0);
         }
 
 //        adp=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,str);
@@ -80,7 +80,7 @@ public class ViewRecords extends AppCompatActivity {
                     }
                 }
 
-                adp=new ArrayAdapter<>(ViewRecords.this,android.R.layout.simple_list_item_1,st);
+                adp=new ArrayAdapter<>(ViewRecords.this,R.layout.mylistitem,st);
                 lvRecords.setAdapter(adp);
             }
 
