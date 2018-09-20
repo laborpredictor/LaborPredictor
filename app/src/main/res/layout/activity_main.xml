@@ -7,29 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <Button
-       android:id="@+id/btnTest"
-       android:textSize="18dp"
-       android:text="Labor Predictor"
+   <ImageView
+       android:layout_margin="1dp"
+       android:layout_weight="2"
+       android:background="@drawable/pregnant"
        android:layout_width="match_parent"
-       android:layout_height="70dp" />
-   <Button
-       android:id="@+id/btnViewRecords"
-       android:textSize="18dp"
-       android:text="View Records"
+       android:layout_height="0dp" />
+
+   <Space
        android:layout_width="match_parent"
-       android:layout_height="70dp" />
-   <Button
-       android:id="@+id/btnUserGuide"
-       android:textSize="18dp"
-       android:text="User Guide"
+       android:layout_height="1dp" />
+
+   <LinearLayout
+       android:layout_weight="3"
+       android:orientation="vertical"
        android:layout_width="match_parent"
-       android:layout_height="70dp" />
-   <Button
-       android:id="@+id/btnAbout"
-       android:textSize="18dp"
-       android:text="About"
-       android:layout_width="match_parent"
-       android:layout_height="70dp" />
+       android:layout_height="0dp">
+
+      <Button
+          android:layout_margin="1dp"
+          android:background="@android:color/holo_blue_light"
+          android:textColor="@android:color/white"
+          android:layout_weight="1"
+          android:id="@+id/btnTest"
+          android:textSize="18dp"
+          android:text="Labor Predictor"
+          android:layout_width="match_parent"
+          android:layout_height="0dp" />
+      <Button
+          android:layout_margin="1dp"
+          android:background="@android:color/holo_blue_light"
+          android:textColor="@android:color/white"
+          android:layout_weight="1"
+          android:id="@+id/btnViewRecords"
+          android:textSize="18dp"
+          android:text="View Records"
+          android:layout_width="match_parent"
+          android:layout_height="0dp" />
+      <Button
+          android:layout_margin="1dp"
+          android:background="@android:color/holo_blue_light"
+          android:textColor="@android:color/white"
+          android:layout_weight="1"
+          android:id="@+id/btnUserGuide"
+          android:textSize="18dp"
+          android:text="User Guide"
+          android:layout_width="match_parent"
+          android:layout_height="0dp" />
+      <Button
+          android:layout_margin="1dp"
+          android:background="@android:color/holo_blue_light"
+          android:textColor="@android:color/white"
+          android:layout_weight="1"
+          android:id="@+id/btnAbout"
+          android:textSize="18dp"
+          android:text="About"
+          android:layout_width="match_parent"
+          android:layout_height="0dp" />
+
+
+   </LinearLayout>
 
 </LinearLayout>

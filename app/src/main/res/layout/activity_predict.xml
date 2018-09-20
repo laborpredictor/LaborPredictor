@@ -12,7 +12,8 @@
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_margin="2dp"
@@ -60,11 +61,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:background="@drawable/border"
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_margin="2dp"
@@ -114,7 +116,8 @@
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_margin="2dp"
@@ -162,7 +165,8 @@
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <TextView
             android:visibility="gone"
             android:text="Fetus Weight"
@@ -196,7 +200,8 @@
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <TextView
             android:layout_margin="2dp"
             android:text="Fetus Position"
@@ -255,6 +260,9 @@
     </LinearLayout>
 
     <Button
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:layout_margin="1dp"
         android:id="@+id/btnSubmit"
         android:text="Submit"
         android:textSize="18dp"
