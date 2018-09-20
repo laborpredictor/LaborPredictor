@@ -233,7 +233,8 @@
         android:layout_margin="1dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <TextView
             android:layout_margin="2dp"
             android:text="Placenta Position"
@@ -267,7 +268,8 @@
         android:text="Submit"
         android:textSize="18dp"
         android:layout_width="match_parent"
-        android:layout_height="70dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>
 
