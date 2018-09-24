@@ -39,7 +39,7 @@
             android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
             <EditText
                 android:id="@+id/etName"
                 android:hint="Name"
@@ -96,7 +96,7 @@
             android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
             <EditText
                 android:id="@+id/etBPSystol"
                 android:hint="BP Systolic"
@@ -147,7 +147,7 @@
             android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="2">
             <EditText
                 android:id="@+id/etFHR"
                 android:layout_weight="1"
@@ -200,7 +200,7 @@
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="2"/>
     </LinearLayout>
 
     <LinearLayout
