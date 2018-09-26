@@ -25,7 +25,7 @@ public class Predict extends AppCompatActivity {
     String[] strFPNormalSubtype={"Cephalic"};
     String[] strFPAbnormalSubtype={"Transverse","Occipito","Breech","Brow"};
     String[] strPPNormalSubtype={"Posterior","Anterior"};
-    String[] strPPAbnormalSubtype={"Placental Abruption","Placenta Bleeding","Placenta Pravia"};
+    String[] strPPAbnormalSubtype={"Placenta Bleeding","Placenta Pravia"};
     Button btnSubmit;
     double nfhrn=1,nfhra=0,nbpn=0.9583333333,nbpa=0.0416666667,ncln=1,ncla=0,ncephalic=0.916667,ntransverse=0.0416666667,
             nbreech=0.041666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
