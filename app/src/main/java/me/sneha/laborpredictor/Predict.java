@@ -22,8 +22,8 @@ public class Predict extends AppCompatActivity {
     Spinner spFPType,spFPSubtype,spPPType,spPPSubtype;
     ArrayAdapter<String> adpType,adpFPNormalSubtype,adpFPAbnormalSubtype,adpPPNormalSubtype,adpPPAbnormalSubtype;
     String[] strType={"Normal","Abnormal"};
-    String[] strFPNormalSubtype={"Cephalic","Vertex"};
-    String[] strFPAbnormalSubtype={"Transverse","Occipito","Shoulder","Breech","Brow"};
+    String[] strFPNormalSubtype={"Cephalic"};
+    String[] strFPAbnormalSubtype={"Transverse","Occipito","Breech","Brow"};
     String[] strPPNormalSubtype={"Posterior","Anterior"};
     String[] strPPAbnormalSubtype={"Placental Abruption","Placenta Bleeding","Placenta Pravia"};
     Button btnSubmit;
