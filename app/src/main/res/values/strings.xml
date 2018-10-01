@@ -6,9 +6,86 @@ b. Doppler Ultrasound
 A Doppler is a form of ultrasound scan that helps to assess babys health [4]. It measures the blood flow in different parts of fetal body, such as umbilical cord, brain, and heart. This helps to show whether fetal is getting all the oxygen and nutrients needs via the placenta.The transducer sends out sound waves, which bounces off the blood flow to fetal body through the cord as well as his blood circulation system. This creates an image on a display which shows how the blood is flowing.  This is shown in Figure 3.\n\nc. CT Scan
 A doctor or physician may order a Computerized tomography (CT) scan of the fetus to formulate detailed pictures and analyze the internal structure. Computerized Tomography (CT) scanning is useful to get a very detailed 3D image of certain parts of the body. The same is shown in Figure 4
 </string>
-    <string name="userguide">*test lines*\nPut something in user guide section !\n\nrandom text\n\na. Ultra scan
-As shown in Figure 3, an ultrasound scan sends sound waves through womb (uterus). These waves bounce off the baby as echoes. The echoes are turned into an image on a screen that shows fetal position and movements. Hard tissues such as bone, reflect the sound waves and make the biggest echoes. It includes white in the image and soft tissues as grey. Fluids such as the amniotic fluid surrounding the baby appear as black. This is because the sound waves go through with no echoes. A first-trimester scan will test that babys heart is beating and also look at the basic examination of babys head, abdominal wall, and limbs.\n\n
-b. Doppler Ultrasound
-A Doppler is a form of ultrasound scan that helps to assess babys health [4]. It measures the blood flow in different parts of fetal body, such as umbilical cord, brain, and heart. This helps to show whether fetal is getting all the oxygen and nutrients needs via the placenta.The transducer sends out sound waves, which bounces off the blood flow to fetal body through the cord as well as his blood circulation system. This creates an image on a display which shows how the blood is flowing.  This is shown in Figure 3.\n\nc. CT Scan
-A doctor or physician may order a Computerized tomography (CT) scan of the fetus to formulate detailed pictures and analyze the internal structure. Computerized Tomography (CT) scanning is useful to get a very detailed 3D image of certain parts of the body. The same is shown in Figure 4</string>
+    <string name="userguide">
+        How to use this application?
+1. The main layout interface contains following options:
+•	Labor Predictor
+•	View Records
+•	User Guide
+•	About
+1.1 In “LABOR PREDICTOR” option, values of some crucial parameters are to be entered which are as follows:
+•	Blood Pressure of expecting mother
+•	Heartbeat of fetus
+•	Cervix length of expecting mother
+•	Amniotic Fluid
+•	Fetus position in womb
+•	Placenta Position
+        1.1.1 Blood Pressure of Expecting Mother
+Normal blood pressure is usually somewhere close to 120/80 mmHg.  Blood Pressure is recorded as two types of numbers. The systolic number is the top number, which indicates the amount of pressure in the arteries when your heart beats. The diastolic number is the bottom number, which indicates the amount of pressure in the arteries between heartbeats. Your blood pressure naturally rises with each heartbeat and falls when the heart rests in between beats. However, the rapid changes your body goes through during pregnancy can greatly influence these numbers and cause a drastic change in blood pressure. If blood pressure is between 140/90 and 149/99 mmHg it is called as Mildly high, If blood pressure is between 150/100 and 159/109 mmHg it is called as Moderately high and if blood pressure is 160/110 mmHg or higher it is called as severely high blood pressure. If the BP of mother is not in normal range then the risks to mother includes:
+•	Chances of having a stroke.
+•	Chances of damage to kidneys and liver.
+•	Risk of blood clotting problems.
+•	Risk of severe bleeding from placenta.
+If developed pre-eclampsia, then it can cause serious damage to organs, including brain and kidneys. The risk to fetus baby includes:
+•	Chances of having poor growth of baby.
+•	Chances of premature birth.
+
+1.1.2 The Heartbeat of Fetus
+In most cases, fetal heart rates are monitored during labor to see fetus status and to identify potential problems ahead of time. The normal range for a full term baby’s heart rate during labor is close to 110-160 beats per minute (bpm). Higher or lower rates can be a sign of fetus having trouble coping with labor, depending on a number of factors. If the fetal heart rates are less than 110bpm, it is known as bradycardia (abnormally slow heart rate) and if Fetal Heart Rates are greater than160bpm it is called tachycardia (abnormally high heart rate).
+
+ 1.1.3 Cervix Length of Expecting Mother
+Normal cervical length measures 4 to 5 cm when woman is not pregnant. At the time of a normal pregnancy, the cervix remains firm, long, and closed until the labor starts. It starts to soften, shorten (efface) and open up (dilate) as body prepares itself for normal labor. In the third trimester the cervical length is always between 3 cm to 3.5 cm and normally it decreases progressively as the pregnancy advances for labor. When cervical length is measured less than 2.2 cm (abnormal), women are not in progress to deliver normally. Doctor can try to induce by cervix ripening. Normal cervix length should be 10 cm at the time of delivery.
+
+1.1.4 Amniotic Fluid
+Amniotic fluid is a clear, slightly yellowish liquid that surrounds the unborn baby (fetus) during pregnancy. It is contained in the amniotic sac. The amniotic fluid is the protective liquid which serves as a cushion for the growing fetus, but also serves to facilitate the exchange of nutrients, water, and biochemical products between mother and fetus. It also acts as a buffer to protect your baby from external forces and injury. How much fluid should be present can become a concern for some women during pregnancy. There may be too much (polyhydramnios) or too little (oligohydramnios) amniotic fluid. These changes in amniotic fluid levels are often a cause of concern for care providers, as it indicates a problem in the balance between fluid production and clearance. Average range of amniotic liquid is considered as 800 mL-1000mL.  In Gynecologist term it is called as Amniotic Fluid Index (AFI) and measured in Centimeter. So the normal AFI is 8-18cm.
+
+1.1.5 Fetus Position in Womb
+The most common and abnormal combination consists of positions as follows:
+Normal Positions are:
+•	Cephalic Presentation/Vertex Presentation
+Abnormal Positions are:
+•	Occiput-Posterior Presentation
+•	Brow Presentation
+•	Breech Presentation
+•	Shoulder Presentation/Transverse Lie
+
+Cephalic Presentation/Vertex Presentation
+The normal position of a fetus is facing toward the woman’s back with the face and body angled to one side and the neck flexed, and presentation is head first
+
+        Occiput- Posterior Presentation
+In the occiput posterior presentation, the fetus is head first but is facing forwarded towards the mother's abdomen. It is the most common abnormal position or presentation. When a fetus faces forward, the neck is often unbent rather than bent, and the head needs more space to pass through the birth canal. Doctor tries to deliver a baby by a vacuum extractor or forceps or caesarean delivery is necessary. The first position in figure 2 shows the occiput-Posterior presentation.
+
+Brow Presentation
+If baby is in a brow presentation, this means the largest area of head will be trying to fit through pelvis during birth. Brow presentation usually happens when baby's neck and head are slightly extended (deflexed), as if baby is looking up. Doctor’s tries for normal delivery otherwise C-section is recommended. The second position in figure 2 shows the brow presentation.
+
+Breech Presentation
+In Breech presentation, the buttocks or sometimes the feet present first. Breech presentation occurs in 3 to 4% of full-term deliveries. If delivered vaginally in breech presentation, baby may injured or hurt. If breech presentation is noticed before labor or delivery, problems can be avoided. The expert presses the women’s abdomen to turn the fetus into right position after 36 weeks of pregnancy. However, if labor
+begins and the fetus is in breech presentation, problems may occur and doctor refers C-section. The third position in figure 2 shows the breech presentation.
+
+Shoulder Presentation/Transverse Lie Presentation
+Shoulder presentation is also an abnormal position of the fetus at the time of delivery of mother. In this, the fetus lies transversely so that its vertebral column lies perpendicular to the maternal position of spine. So the part of the fetus that enters in the birth canal will be the trunk or shoulder of fetus. In spite of some deviations in the positioning of the fetus, the doctor may try for vaginal birth only if the baby’s head, or buttock, or feet are at the bottom.  Hence, the vaginal birth will be unthinkable for the mother and doctor and expecting mother has to undergo a C-section. The decision for usage of forceps or a vacuum may use for normal delivery process. The fourth position in figure 2 shows the shoulder presentation.
+
+1.1.6 Placenta Position
+The placenta is an organ which looks like pancake-shape. It develops during pregnancy, and is attached to the wall of the uterus and can be in different positions. The different possible placental locations are:
+Posterior Placenta
+Anterior Placenta
+Placenta Praevia (Low-Lying Placenta)
+Placental Abruption
+The Normal Positions are:
+Posterior Placenta
+When the fertilized egg attaches itself on the back side of the uterus, the placenta develops and starts to grow on the back wall of the uterus. This position of the placenta is known as posterior placenta.
+
+Anterior Placenta
+When the fertilized egg attaches itself on the front side of the uterus, the placenta too develops on the front wall of the womb and the baby grows behind it. This position of the placenta is known as anterior placenta.
+The Abnormal Positions are:
+Placenta Praevia (Low-Lying Placenta)
+When the placenta grows towards the lower end of the uterus or towards the cervix such type of position of the placenta is known as placenta praevia or low-lying placenta. If the placenta stays low in womb, near to or covering cervix, it may block the baby's way out. If placenta is near or covering the cervix, baby can’t be delivered vaginally, so C-section will be recommended by doctor.
+
+Placental Abruption
+Placental abruption is a serious condition in which the placenta starts to come away from the inside of the womb wall before birth. It can cause stomach pain, bleeding from the vagina and frequent contractions. It can also affect the baby, increasing the risk of premature birth, growth problems and stillbirth. If the due date is near, the baby will need to be born straight away, and a caesarean section may be recommended.
+However, if the baby is very premature and the abruption is minor, mother may be kept in hospital for close observation.
+
+        1.2 The main layout has second option which is “VIEW RECORDS”.
+After clicking on view records, the already entered data of pregnant women gets displayed. If the new data is entered from user then it will ask for saving data into database. If user allows to save data then newly added data will be saved into database. User can search for particular data into database by typing name of the women.
+    </string>
 </resources>
