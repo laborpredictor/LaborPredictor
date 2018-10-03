@@ -14,5 +14,6 @@ public class userguide extends AppCompatActivity {
         setContentView(R.layout.activity_userguide);
 
         tvGuide=findViewById(R.id.tvGuide);
+
     }
 }

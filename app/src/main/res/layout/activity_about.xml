@@ -12,8 +12,25 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:padding="5dp"
+            android:text="Why this application is needed ?"
+            android:background="@drawable/border3"
+            android:textSize="21dp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:id="@+id/tvAbout"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:padding="5dp"
+            android:background="@drawable/border2"
             android:textSize="18dp"
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/about"/>
