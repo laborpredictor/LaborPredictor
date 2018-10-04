@@ -1,7 +1,9 @@
 package me.sneha.laborpredictor;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class ViewRecords extends AppCompatActivity {
 
@@ -98,12 +101,16 @@ public class ViewRecords extends AppCompatActivity {
     };
 
     dbhelper db;
+    SharedPreferences share;
+    SharedPreferences.Editor ed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_records);
 
+        share=getSharedPreferences(Prefs.StoreKey, Context.MODE_PRIVATE);
+        Toast.makeText(this, ""+share.getString("StatusKey",""), Toast.LENGTH_SHORT).show();
         db=new dbhelper(this);
         dbase=db.getWritableDatabase();
         dbase.beginTransaction();
