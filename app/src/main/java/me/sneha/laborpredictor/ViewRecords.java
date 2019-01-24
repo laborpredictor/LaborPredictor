@@ -110,7 +110,7 @@ public class ViewRecords extends AppCompatActivity {
         setContentView(R.layout.activity_view_records);
 
         share=getSharedPreferences(Prefs.StoreKey, Context.MODE_PRIVATE);
-        Toast.makeText(this, ""+share.getString("StatusKey",""), Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, ""+share.getString("StatusKey",""), Toast.LENGTH_SHORT).show();
         db=new dbhelper(this);
         dbase=db.getWritableDatabase();
         dbase.beginTransaction();
