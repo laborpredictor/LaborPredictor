@@ -28,15 +28,17 @@ public class Predict extends AppCompatActivity {
     String[] strPPNormalSubtype={"Posterior","Anterior"};
     String[] strPPAbnormalSubtype={"Placenta Abruption","Placenta Pravia"};
     Button btnSubmit;
-    /*
-    double nfhrn=1,nfhra=0,nbpn=0.9583333333,nbpa=0.0416666667,ncln=1,ncla=0,ncephalic=0.916667,ntransverse=0.0416666667,
-            nbreech=0.041666667,nposterior=0.3333333333,nanterior=0.6666666667,npbleeding=0,nppravia=0,
-            nafyn=0.833333333,nafya=0.166666667,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
-    double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.625,ctransverse=0.0625,
-            cbreech=0.3125,cposterior=0.4375,canterior=0.4375,cpbleeding=0.0625,cppravia=0.0625,
-            cafyn=0.625,cafya=0.375,cshoulder=0,coccipito=0,cbrow=0,cplacabr=0;
-            */
-//    double evidenceN=0.6,evidenceC=0.4;
+
+    double nfhrn=1,nfhra=0,nbpn=0.9761904762,nbpa=0.0238095238,ncln=1,ncla=0,ncephalic=0.9761904762,ntransverse=0.0416666667,
+            nbreech=0.0238095238,nposterior=0.3095238095,nanterior=0.6904761905,npbleeding=0,nppravia=0,
+            nafyn=0.9047619048,nafya=0.0952380952,nshoulder=0,noccipito=0,nbrow=0,nplacabr=0;
+
+    double cfhrn=1,cfhra=0,cbpn=0.9285714286,cbpa=0.0714285714,ccln=0.8928571429,ccla=0.1071428571,ccephalic=0.5357142857,ctransverse=0.0625,
+            cbreech=0.3214285714,cposterior=0.4285714286,canterior=0.4642857143,cpbleeding=0.0357142857,cppravia=0.0714285714
+            ,cafyn=0.6785714286,cafya=0.3214285714,cshoulder=0.1428571429,coccipito=0,cbrow=0,cplacabr=0;
+
+    double evidenceN=0.6,evidenceC=0.4;
+
     double normal=1,ceasar=1;
     String res="";
 
@@ -49,6 +51,7 @@ public class Predict extends AppCompatActivity {
     double b2=0,c2=0,d2=0,e2=0,f2=0,g2=0,h2=0,i2=0,j2=0,k2=0,l2=0,m2=0,n2=0,o2=0,p2=0,q2=0,r2=0;
     double b3=0,c3=0,d3=0,e3=0,f3=0,g3=0,h3=0,i3=0,j3=0,k3=0,l3=0,m3=0,n3=0,o3=0,p3=0,q3=0,r3=0;
 
+    /* //automatic variables starts
     double nfhrn=b2/s2,nfhra=c2/s2,nbpn=d2/s2,nbpa=e2/s2,ncln=f2/s2,ncla=g2/s2,ncephalic=h2/s2,noccipito=i2/s2,
             nbreech=j2/s2,nshoulder=k2/s2,nbrow=l2/s2,nposterior=m2/s2,nanterior=n2/s2,npbleeding=o2/s2,nppravia=p2/s2,
             nafyn=q2/s2,nafya=r2/s2;
@@ -58,12 +61,15 @@ public class Predict extends AppCompatActivity {
             cafyn=q2/s2,cafya=r2/s2;
 
     double evidenceN=0,evidenceC=0;
+*/
+    //automatic variables ends
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_predict);
 
+/*
         //calculate all values
         db=new dbhelper(this);
         dbase=db.getReadableDatabase();
@@ -244,9 +250,12 @@ public class Predict extends AppCompatActivity {
 
             //****dynamic values calculation block ends
 
+
+
 //            Log.d("*s",str[j][0]+" "+str[j][1]+" "+str[j][2]+" "+str[j][3]+" "+str[j][4]+" "+str[j][5]+" "+ str[j][6]+" "+str[j][7]+" "+str[j][8]+" "+str[j][9]+" "+str[j][10]);
 //            Log.d("*s",ceas_count+" "+normal_count);
         }
+
         Log.d("*s","normal"+s2+" ceasar"+s3+"\nfhrn "+b2+" "+b3+" fhra "+c2+" "+c3+"\nbpn "+d2+" "+d3+" bpa "+e2+" "+e3
                 +"\ncln "+f2+" "+f3+" cla "+g2+" "+g3+" afn "+q2+" "+q3+" afa "+r2+" "+r3+"\n"
                 +" cep "+h2+" "+h3+" occiput "+i2+" "+i3+" shoulder "+k2+" "+k3+" breech "+j2+" "+j3
@@ -268,6 +277,9 @@ public class Predict extends AppCompatActivity {
 
         Log.d("*s",cfhrn+", "+cfhra+", \n"+cbpn+", "+cbpa+", \n"+ccln+", "+ccla+", \n"+ccephalic+", "+coccipito+", "+
                 cbreech+", "+cshoulder+", "+cbrow+", \n"+cposterior+", "+canterior+", \n"+cpbleeding+", "+cppravia+", \n"+cafyn+", "+cafya);
+
+     */ //automatic calculation block ends
+
         /*double cfhrn=1,cfhra=0,cbpn=0.9375,cbpa=0.0625,ccln=0.875,ccla=0.125,ccephalic=0.625,coccipito=0,
                 cbreech=0.3125,cshoulder=0,cbrow=0,cposterior=0.4375,canterior=0.4375,cpbleeding=0.0625,cppravia=0.0625,
                 cafyn=0.625,cafya=0.375;

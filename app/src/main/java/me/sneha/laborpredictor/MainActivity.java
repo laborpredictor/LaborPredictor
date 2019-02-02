@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         // Toast.makeText(this, ""+share.getString(Prefs.StatusKey,""), Toast.LENGTH_SHORT).show();
 
         if(share.getString(Prefs.StatusKey,"no value").equals("no value")){
-            writevalues();
+            //writevalues();
             ed = share.edit();
             ed.putString(Prefs.StatusKey, "done");
             ed.apply();

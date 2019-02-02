@@ -73,11 +73,7 @@ public class RecordDetail extends AppCompatActivity {
             tvResult.setTextColor(Color.rgb(0, 175, 0));
             tvResTitle.setTextColor(Color.rgb(0, 175, 0));
         }
-        tvResult.setText(": "+str[10]);
-
-
+        tvResult.setText(str[10]);
 
     }
-
-
 }
